@@ -1,20 +1,3 @@
-package MooseX::NestedAttributesConstructor;
-use Moose;
-our $VERSION = '0.01';
-
-Moose::Exporter->setup_import_methods(
-    # class_metaroles => {
-    # 	class => ['MooseX::NestedAttributesConstructor::Trait::Class']
-    # }
-    base_class_roles => ['MooseX::NestedAttributesConstructor::Class']
-);
-
-package MooseX::NestedAttributesConstructor::Meta::Trait::NestedAttribute;
-use Moose::Role;
-Moose::Util::meta_attribute_alias('NestedAttribute');
-
-1;
-
 =pod
 
 =head1 NAME
