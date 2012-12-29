@@ -3,10 +3,9 @@ use Moose;
 our $VERSION = '0.01';
 
 Moose::Exporter->setup_import_methods(
-    # class_metaroles => {
-    # 	class => ['MooseX::NestedAttributesConstructor::Trait::Class']
-    # }
-    base_class_roles => ['MooseX::NestedAttributesConstructor::Class']
+    class_metaroles => {
+    	class => ['MooseX::NestedAttributesConstructor::Trait::Class']
+    }
 );
 
 package MooseX::NestedAttributesConstructor::Meta::Trait::NestedAttribute;
@@ -16,6 +15,8 @@ Moose::Util::meta_attribute_alias('NestedAttribute');
 1;
 
 =pod
+
+=encoding utf8
 
 =head1 NAME
 
@@ -51,19 +52,17 @@ MooseX::NestedAttributesConstructor - Create attributes from a nested data struc
 
   say $_->city for @{$p->addresses};
 
-=head1 WARNING
-
-This is the first Moose I've cooked. 
-
 =head1 DESCRIPTION
 
-This module sets attributes from a nested data structure passed to the constructor of your Moose object. 
-The appropriate types will be created. Just add the C<NestedAttrubute> trait to attributes with a custom 
-or parameterized type.
+This module sets attributes from a nested data structure passed your object's constructor.
+The appropriate types will be created, just add the C<NestedAttrubute> trait to attributes with
+a custom or parameterized type.
+
+Nested attributes are turned into objects after C<BUILDARGS> is called.
 
 =head1 AUTHOR
 
-Skye Shaw (sshaw AT lucas.cis.temple.edu) 
+Skye Shaw (sshaw AT lucas.cis.temple.edu)
 
 =head1 SEE ALSO
 
