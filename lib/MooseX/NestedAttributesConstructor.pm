@@ -33,6 +33,7 @@ MooseX::NestedAttributesConstructor - Create attributes from a nested data struc
 
   package Person;
   use Moose;
+  use MooseX::NestedAttributesConstructor
 
   has name      => ( is => 'rw' );
   has addresses => ( is     => 'rw',
