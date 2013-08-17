@@ -47,11 +47,11 @@ Nested attributes are turned into objects after C<BUILDARGS> is called.
 
 =head1 AUTHOR
 
-Skye Shaw (sshaw AT lucas.cis.temple.edu)
+Skye Shaw (skye.shaw AT gmail.com)
 
 =head1 SEE ALSO
 
-L<MooseX::StrictConstructor>
+L<MooseX::StrictConstructor>, L<MooseX::Types>
 
 =head1 COPYRIGHT
 
