@@ -22,6 +22,6 @@ sub MY::postamble
     return if -r 'README' or ! -r $self->{VERSION_FROM};
     return<<END_MAKE;
 README.pod: $self->{VERSION_FROM}
-        \@perldoc -uT $self->{VERSION_FROM} > README.pod
+	\@perldoc -uT $self->{VERSION_FROM} > README.pod
 END_MAKE
 }
