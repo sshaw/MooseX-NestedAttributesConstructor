@@ -8,10 +8,11 @@ WriteMakefile(
      VERSION_FROM  => 'lib/MooseX/NestedAttributesConstructor.pm',
      VERSION_FROM  => 'lib/MooseX/NestedAttributesConstructor.pm',
     (eval { ExtUtils::MakeMaker->VERSION(6.46) } ?
-       (META_MERGE  => { resources => { bugtracker => 'http://github.com/sshaw/MooseX-NestedAttributesConstructor/issues',
-                                        repository => { url  => 'git://github.com/sshaw/MooseX-NestedAttributesConstructor.git',
-                                                        web  => 'http://github.com/sshaw/MooseX-NestedAttributesConstructor',
-                                                        type => 'git'}}}) : ())
+       (META_MERGE  => { resources => { 'meta-spec' => { version => 2 },
+				        bugtracker  => 'http://github.com/sshaw/MooseX-NestedAttributesConstructor/issues',
+				        repository  => { url  => 'git://github.com/sshaw/MooseX-NestedAttributesConstructor.git',
+					 	         web  => 'http://github.com/sshaw/MooseX-NestedAttributesConstructor',
+						         type => 'git'}}}) : ())
 );
 
 # Create README.pod for a repo's GitHub page. Unlike CPAN, GitHub won't
